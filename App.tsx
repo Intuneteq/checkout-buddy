@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import CarouselPrimary from './components/ui/buttons/carousel/PrimaryCarousel';
+import SecondaryCarousel from './components/ui/buttons/carousel/SecondaryCarousel';
+import TertiaryCarousel from './components/ui/buttons/carousel/TertiaryCarousel';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
+      <TertiaryCarousel />
     </View>
   );
 }
