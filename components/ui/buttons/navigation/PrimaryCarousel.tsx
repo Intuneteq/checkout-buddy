@@ -2,7 +2,7 @@ import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { StyleProp, StyleSheet, ViewStyle } from "react-native";
 
-import Carousel from "./Carousel";
+import NavigationBtn from "./NavigationBtn";
 import { GlobalStyle } from "../../../../constants/GlobalStyles";
 
 type Props = {
@@ -11,15 +11,15 @@ type Props = {
   style?: StyleProp<ViewStyle>;
 };
 
-const PrimaryCarousel = ({ onPress, icon, style }: Props) => {
+const PrimaryNavigationBtn = ({ onPress, icon, style }: Props) => {
   return (
-    <Carousel style={[styles.button, style]} onPress={onPress}>
+    <NavigationBtn style={[styles.button, style]} onPress={onPress}>
       <Ionicons name={icon} style={styles.icon} />
-    </Carousel>
+    </NavigationBtn>
   );
 };
 
-export default PrimaryCarousel;
+export default PrimaryNavigationBtn;
 
 const styles = StyleSheet.create({
   button: {

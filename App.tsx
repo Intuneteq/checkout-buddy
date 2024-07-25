@@ -19,6 +19,7 @@ import SubTitle from "./components/ui/SubTitle";
 import Input from "./components/ui/forms/FormInput";
 import PasswordInput from "./components/ui/forms/PasswordInput";
 import PinInput from "./components/ui/forms/PinInput";
+import ActivityCard from "./components/ui/ActivityCard";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -48,9 +49,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <PasswordInput onChangeText={() => {}} error />
-      <PinInput onChangePin={() => {}} />
-      {/* <SubTitle>Hey! Welcome back, you’ve been missed</SubTitle> */}
+    
+     
     </View>
   );
 }

@@ -14,7 +14,7 @@ type Props = {
   style: StyleProp<ViewStyle>;
 };
 
-export default function Carousel({ children, onPress, style }: Props) {
+export default function NavigationBtn({ children, onPress, style }: Props) {
   return (
     <Pressable
       style={({ pressed }) => [styles.button, style, pressed && styles.pressed]}
