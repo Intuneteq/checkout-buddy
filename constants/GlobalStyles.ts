@@ -22,7 +22,7 @@ export const GlobalStyle = {
     secondary80: "#2F0B24",
     secondary90: "#200818",
     secondary100: "#10350F",
-    white10: "#FF4747",
+    white10: "#F7F7F7",
     whiteBase: "#FFFFFF",
     black10: "#D1D1D1",
     black20: "#B3B3B3",

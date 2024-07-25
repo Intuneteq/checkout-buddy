@@ -9,7 +9,8 @@ type Props = {
   children: ReactNode;
 };
 
-export default function SecondaryButton({ onPress, children }: Props) {
+
+export default function TertiaryButton({ onPress, children }: Props) {
    return (
      <FlatButton style={styles.button} textStyle={styles.text} onPress={onPress}>
        {children}
@@ -20,9 +21,9 @@ export default function SecondaryButton({ onPress, children }: Props) {
 const styles = StyleSheet.create({
    button: {
       borderWidth: 1,
-      borderColor: GlobalStyle.colors.primaryBase
+      borderColor: GlobalStyle.colors.secondary90
    },
    text: {
-      color: GlobalStyle.colors.primaryBase
+      color: GlobalStyle.colors.secondary90
    }
 })
