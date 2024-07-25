@@ -7,6 +7,7 @@ import {
   ViewStyle,
 } from "react-native";
 import React, { ReactNode } from "react";
+import { GlobalStyle } from "../../../../constants/GlobalStyles";
 
 type Props = {
   children: ReactNode;
@@ -44,6 +45,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
-    fontWeight: 500,
+    fontFamily: GlobalStyle.fonts.weight500,
   },
 });
