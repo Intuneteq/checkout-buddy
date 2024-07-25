@@ -36,5 +36,15 @@ export const GlobalStyle = {
     black90: "#090909",
     black100: "#050505",
   },
-  typography: {},
+  fonts: {
+    weight100: "Urbanist_100Thin",
+    weight200: "Urbanist_200ExtraLight",
+    weight300: "Urbanist_300Light",
+    weight400: "Urbanist_400Regular",
+    weight500: "Urbanist_500Medium",
+    weight600: "Urbanist_600SemiBold",
+    weight700: "Urbanist_700Bold",
+    weight800: "Urbanist_800ExtraBold",
+    weight900: "Urbanist_900Black",
+  },
 };
