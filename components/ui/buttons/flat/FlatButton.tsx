@@ -34,11 +34,13 @@ export default function FlatButton({
 
 const styles = StyleSheet.create({
   button: {
+    flex: 1,
     height: 53,
-    width: "100%",
+    width: 'auto',
     borderRadius: 8,
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: 'row',
   },
   pressed: {
     opacity: 0.7,

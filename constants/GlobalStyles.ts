@@ -23,7 +23,9 @@ export const GlobalStyle = {
     secondary90: "#200818",
     secondary100: "#10350F",
     white10: "#F7F7F7",
+    white100: "#F5F5F5",
     whiteBase: "#FFFFFF",
+    black0: "#8C8C8C",
     black10: "#D1D1D1",
     black20: "#B3B3B3",
     black30: "#8D8D8D",
@@ -35,6 +37,7 @@ export const GlobalStyle = {
     black80: "#0D0D0D",
     black90: "#090909",
     black100: "#050505",
+    green100: "#06B703"
   },
   fonts: {
     weight100: "Urbanist_100Thin",

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { StyleSheet } from "react-native";
+import { StyleProp, StyleSheet, ViewStyle } from "react-native";
 
 import FlatButton from "./FlatButton";
 import { GlobalStyle } from "../../../../constants/GlobalStyles";

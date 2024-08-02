@@ -1,27 +1,36 @@
 import React from "react";
 import {
-  Image,
-  ImageSourcePropType,
   Pressable,
+  StyleProp,
   StyleSheet,
   View,
+  ViewStyle,
 } from "react-native";
 
-import { GlobalStyle } from "../../constants/GlobalStyles";
+import { Ionicons } from "@expo/vector-icons";
 
 type Props = {
-  source: ImageSourcePropType;
+  icon: keyof typeof Ionicons.glyphMap;
+  size: number;
+  color?: string;
+  style?: StyleProp<ViewStyle>;
   onPress: () => void;
 };
 
-export default function IconButton({ source, onPress }: Props) {
+export default function IconButton({
+  icon,
+  size,
+  color,
+  style,
+  onPress,
+}: Props) {
   return (
     <Pressable
-      style={({ pressed }) => [styles.container, pressed && styles.pressed]}
+      style={({ pressed }) => [style, pressed && styles.pressed]}
       onPress={onPress}
     >
-      <View style={[styles.imageContainer]}>
-        <Image style={styles.image} source={source} />
+      <View style={styles.container}>
+        <Ionicons name={icon} color={color} size={size} />
       </View>
     </Pressable>
   );
@@ -29,25 +38,11 @@ export default function IconButton({ source, onPress }: Props) {
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 1,
-    borderColor: GlobalStyle.colors.black10,
-    width: 64,
-    height: 64,
-    borderRadius: (64 + 64) / 2,
-    backgroundColor: GlobalStyle.colors.whiteBase,
+    padding: 8,
     justifyContent: "center",
     alignItems: "center",
   },
   pressed: {
     opacity: 0.7,
-  },
-
-  imageContainer: {
-    width: 24,
-    height: 24,
-  },
-  image: {
-    width: "100%",
-    height: "100%",
   },
 });
