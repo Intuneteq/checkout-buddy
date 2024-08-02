@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import SearchQrCode from "./components/ui/scan/SearchQrCode";
 import useLoadFonts from "./hooks/useLoadFonts";
 import ScanResult from "./components/ui/scan/ScanResult";
+import SearchInput from "./components/ui/searchQR/SearchInput";
+import SearchResultItem from "./components/ui/searchQR/SearchResultItem";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -35,7 +37,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <ScanResult modalVisible={modalVisible} closeModal={closeModal} />
+      <SearchInput />
+      <SearchResultItem />
+      {/* <ScanResult modalVisible={modalVisible} closeModal={closeModal} /> */}
       {/* <SearchQrCode modalVisible={modalVisible} closeModal={closeModal} /> */}
       {/* <SelectAction modalVisible={modalVisible} closeModal={closeModal} /> */}
     </View>
@@ -45,7 +49,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f7f7f7",
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 24,

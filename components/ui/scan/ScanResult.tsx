@@ -48,6 +48,8 @@ export default function ScanResult({ modalVisible, closeModal }: Props) {
     setCart((prev) => [...prev, product]);
   }
 
+  function viewCartHandler() {}
+
   return (
     <ModalContainer modalVisible={modalVisible} closeModal={() => {}}>
       <View style={styles.container}>
@@ -107,12 +109,23 @@ export default function ScanResult({ modalVisible, closeModal }: Props) {
             />
           </View>
         </View>
-        <View style={styles.buttons}>
-          <SecondaryButton onPress={scanAgainHandler}>
-            Scan Again
-          </SecondaryButton>
-          <PrimaryButton onPress={addToCartHandler}>Add to cart</PrimaryButton>
-        </View>
+        {isAdded ? (
+          <View style={styles.buttons}>
+            <SecondaryButton onPress={viewCartHandler}>
+              View Cart
+            </SecondaryButton>
+            <PrimaryButton onPress={scanAgainHandler}>Scan Again</PrimaryButton>
+          </View>
+        ) : (
+          <View style={styles.buttons}>
+            <SecondaryButton onPress={scanAgainHandler}>
+              Scan Again
+            </SecondaryButton>
+            <PrimaryButton onPress={addToCartHandler}>
+              Add to cart
+            </PrimaryButton>
+          </View>
+        )}
       </View>
     </ModalContainer>
   );

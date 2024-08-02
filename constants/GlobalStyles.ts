@@ -37,7 +37,9 @@ export const GlobalStyle = {
     black80: "#0D0D0D",
     black90: "#090909",
     black100: "#050505",
-    green100: "#06B703"
+    blackDeep: "#000000",
+    green100: "#06B703",
+    blue100: "#4791FF"
   },
   fonts: {
     weight100: "Urbanist_100Thin",
@@ -49,5 +51,17 @@ export const GlobalStyle = {
     weight700: "Urbanist_700Bold",
     weight800: "Urbanist_800ExtraBold",
     weight900: "Urbanist_900Black",
+  },
+  shadow: {
+    shadow100: {
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 1,
+        height: 1,
+      },
+      shadowOpacity: 0.1,
+      shadowRadius: 1,
+      elevation: 3,
+    },
   },
 };
