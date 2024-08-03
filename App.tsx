@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Button, Pressable, StyleSheet, Text, View } from "react-native";
+import { Button, Pressable, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import Title from "./components/ui/Title";
 import urbanist from "@expo-google-fonts/urbanist";
 import * as SplashScreen from "expo-splash-screen";
@@ -9,6 +9,8 @@ import useLoadFonts from "./hooks/useLoadFonts";
 import ScanResult from "./components/ui/scan/ScanResult";
 import SearchInput from "./components/ui/searchQR/SearchInput";
 import SearchResultItem from "./components/ui/searchQR/SearchResultItem";
+import ProductCourasel from "./components/ui/ProductCourasel";
+import ProductDetails from "./screens/ProductDetails";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -35,23 +37,36 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <SearchInput />
-      <SearchResultItem />
-      {/* <ScanResult modalVisible={modalVisible} closeModal={closeModal} /> */}
-      {/* <SearchQrCode modalVisible={modalVisible} closeModal={closeModal} /> */}
-      {/* <SelectAction modalVisible={modalVisible} closeModal={closeModal} /> */}
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ProductDetails />
+    </SafeAreaView>
+    // <View style={styles.container}>
+    //   <StatusBar style="auto" />
+    //   <View style={styles.content}>
+    //     <ProductCourasel />
+    //   </View>
+    //   {/* <SearchInput /> */}
+    //   {/* <SearchResultItem /> */}
+    //   {/* <ScanResult modalVisible={modalVisible} closeModal={closeModal} /> */}
+    //   {/* <SearchQrCode modalVisible={modalVisible} closeModal={closeModal} /> */}
+    //   {/* <SelectAction modalVisible={modalVisible} closeModal={closeModal} /> */}
+    // </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f7f7f7",
-    alignItems: "center",
+    backgroundColor: "#F7F7F7",
+    // alignItems: "center",
+    // justifyContent: "center",
+    // paddingHorizontal: 24,
+  },
+  content: {
+    width: "100%",
     justifyContent: "center",
-    paddingHorizontal: 24,
+    alignItems: "center",
+    marginVertical: "auto",
+    height: 500,
   },
 });
